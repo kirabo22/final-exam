@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: limited-access-binding
+  namespace: default
+subjects:
+- kind: User
+  name: your-username  # Replace with your username
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: limited-access
+  apiGroup: rbac.authorization.k8s.io
